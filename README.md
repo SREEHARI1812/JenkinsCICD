@@ -4,3 +4,7 @@
 ![Screenshot from 2023-12-27 16-29-54](https://github.com/sreeharik2024/simple-docker-project/assets/147167838/99bad24e-041f-4f9e-87f0-918ecf471b3a)
 ![Screenshot from 2023-12-27 16-29-21](https://github.com/sreeharik2024/simple-docker-project/assets/147167838/949c3c94-393f-48ce-bcc1-f33a2761767e)
 ![Screenshot from 2023-12-27 16-29-13](https://github.com/sreeharik2024/simple-docker-project/assets/147167838/43f3e063-0b4d-4ecb-9cbd-d1cacc4b26a4)
+
+docker rm -f $(docker ps -a -q)
+docker build -t jenkinscicd:simple .
+sudo docker run -dp 0.0.0.0:3000:80 jenkinscicd:simple
