@@ -1,7 +1,8 @@
 # Use the NGINX base image from Docker Hub
-FROM nginx:alpine
+FROM ubuntu
+RUN apt-get -y install apache2
 
 # Copy the custom index.html to NGINX web root
-COPY . /usr/share/nginx/html
+COPY . /var/www/html
 
 EXPOSE 3000
